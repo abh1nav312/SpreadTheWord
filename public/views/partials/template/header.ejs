@@ -1,0 +1,94 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/libs/css/bootstrap.css" type="text/css" rel="stylesheet" />
+<link href="/libs/fa/css/all.css" type="text/css" rel="stylesheet" />
+<script src="/libs/js/jquery.min.js" type="text/javascript"></script>
+<script src="/libs/js/bootstrap.js" type="text/javascript"></script>
+<!-- <script src="/libs/css/layout.css" type="text/javascript"></script> -->
+
+
+<title>SpreadTheWord</title>
+<div class="navbar sticky-top bg-dark navbar-dark">
+    <div class="container">
+        <a href="/main" class="navbar-brand">SpreadTheWord</a>
+        <form class="navbar-search form-inline" accept-charset="utf-8">
+            <div class="row">
+                <input type="text" class="form-control typeahead mr-2" id="search" data-provide="typeahead" spellcheck="false" autocomplete="off"
+                    placeholder="Search" aria-label="Search here">
+                <button type="submit" class="btn btn-outline-light">
+                    <i class="fas fa-search fa-md"></i>
+                </button>
+            </div>
+        </form>
+        <div>
+            <div class="nav justify-content-center" id="head_nav">
+                <div class="nav justify-content-end">
+                    <button id="newpost" data-toggle='modal' data-target="#postModal" class="nav-item btn btn-success" type="button">
+                        New Post
+                        <i class="fas fa-pen"></i>
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-item nav-link" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bell fa-lg"> </i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="notificationDropdown">
+                        <a href="/notification1" class="dropdown-item">Notification 1</a>
+                        <a href="/notification2" class="dropdown-item">Notification 2</a>
+                        <a href="/notification3" class="dropdown-item">Notification 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-item active nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fas fa-user fa-lg"> </i>
+                        <span id="username_head">
+                            Abhinav
+                        </span>
+                        <span id="user_id_head" style="display:none">
+                            Abhinav
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                        <a href="/profile" class="dropdown-item">Profile</a>
+                        <a href="/settings" class="dropdown-item">Settings</a>
+                        <a href="/logout" class="dropdown-item">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id='new_post'>
+    <div id="postModal" class="modal fade">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">New Post</h4>
+            </div>
+            <div id="post_modal" class="modal-body">
+                <!--Edited -->
+
+                <input class="form-control" type="text" autocomplete="off" placeholder="Add tags!" id="tags_post">
+                <div id="selected_tags"></div>
+                <br>
+                <textarea placeholder="Tell us what you're upto!" id="post_content" rows="5" class="form-control" style="resize:none;width:95%"></textarea>
+                <div class="input-group">
+
+                </div>
+
+                <!--Edited -->
+            </div>
+            <div class="modal-footer">
+                <center>
+                    <button type="button" id="save_post" value="save" class="btn btn-lg btn-success" data-dismiss="modal">Post</button>
+                </center>
+            </div>
+
+        </div>
+    </div>
+</div>
